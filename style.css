@@ -140,11 +140,11 @@
   .mobile-menu {
     z-index: 7000;
     background-color: var(--fondo);
-    position: absolute;
-    top: 50px;
+    position: fixed;
+    top: 55px;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 100vh;
     padding: 24px 24px 45px 24px;
   }
   .mobile-menu a {
@@ -164,10 +164,23 @@
   .mobile-menu ul li {
     margin-bottom: 24px;
   }
+  .closeMenu {
+    width: 95%;
+    display: flex;
+    justify-content: end;
+  }
+  .closeMenu img {
+    width: 2rem;
+    cursor: pointer;
+  }
 
 
 
   /* Video de fondo */
+  #video {
+    width: 100%;
+  }
+
   #video-container {
     position: relative;
     margin-top: -3.8rem;
@@ -194,7 +207,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 90vh;
+    height: 60vh;
     background-color: #c38eb413; /* Filtro de color azul con opacidad del 50% */
     z-index: 100;
   }
@@ -247,6 +260,7 @@
   }
   .presentacion h3{
     color: var(--letra3);
+    padding-bottom: 2rem;
   }
   .imgLogoIris {
     width: 17rem;
@@ -258,14 +272,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 5rem;
+  padding: 0 4rem;
 }
 
   .frase div:nth-child(1){
     position: relative;
     width: 18rem;
     height: 18rem;
-    border: 1px solid var(--very-light-pink);
+    /* border: 1px solid var(--very-light-pink); */
     border-radius: 3%;
     overflow: hidden;
     justify-content: center;
@@ -463,8 +477,8 @@ footer{
       top: 0%;
       left: 0;
       width: 100%;
-      height: 100%;
-      background: linear-gradient(to top, #C38EB4 17%, transparent); /* Degradado de negro a transparente */
+      height: 65%;
+      background: linear-gradient(to top, #C38EB4 5%, transparent); /* Degradado de negro a transparente */
       z-index: 1; /* Asegura que el overlay esté encima del video */
     }
 
@@ -489,10 +503,40 @@ footer{
     #image {
       display: block;
     }
+
+    .anuncio {
+      z-index: 70000;
+      width: 100%;
+      height: 7rem;
+      background-color: var(--fondo);
+      margin-top: -14rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .anuncio #llamar{
+      cursor: pointer;
+      width: 50%;
+      height: 2rem;
+      border-radius: 0.5rem;
+      background-color: var(--letra3);
+      color: var(--fondo);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+    .anuncio #llamar:active {
+      background-color: var(--letra);
+    }
+    .anuncio h3 {
+      padding-top: 1rem;
+    }
     .presentacion {
       max-width: 100%;
       padding: 5rem 2rem 2rem 2rem;
-      z-index: 3;
+      z-index: 6000;
+      margin-top: 0rem;
     }
     .frase {
       width: 100%;
@@ -503,6 +547,16 @@ footer{
       align-items: center;
       padding: 0 1rem;
     }
+      .frase div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+  }
+  .conoce {
+    margin-top: 0rem;
+  }
 
   }
   

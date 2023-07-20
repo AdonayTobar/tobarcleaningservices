@@ -104,6 +104,13 @@ function markClicked() {
   isClicked = true;
 }
 
+const closeMenu = document.querySelector(".closeMenu img");
+
+closeMenu.addEventListener("click", () => {
+  mobileMenu.classList.toggle('inactive');
+    nav.classList.toggle('open');
+});
+
 
 
 

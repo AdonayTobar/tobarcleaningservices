@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taber Tejutepeque</title>
+    <title>Tobar's Cleaning Services</title>
     <link rel="icon" href="./iconos/LogoIrisPagina.jpg" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
@@ -41,8 +41,11 @@
   
         <div class="mobile-menu inactive">
           <ul>
+            <li class="closeMenu">
+              <img src="./iconos/close-12px-svgrepo-com (1).svg" alt="">
+            </li>
             <li>
-              <a href="">Menu</a>
+              <a class="all" href="">Inicio</a>
             </li>
             <li>
               <a class="all" href="#conoce">Servicios</a>
@@ -64,11 +67,21 @@
 
     <!-- Video de fondo -->
     <div id="video-container">
-      <video id="video" src="./Video/VideoFondo.mp4" autoplay loop muted></video>
+      <img id="video" src="https://images.pexels.com/photos/1599790/pexels-photo-1599790.jpeg?auto=compress&cs=tinysrgb&w=600" autoplay loop muted></img>
       <img id="image" src="https://images.pexels.com/photos/1599790/pexels-photo-1599790.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
       <div id="video-overlay"></div>
       <div class="overlay-text">Professional House Cleaning Services</div>
     </div>
+
+    <!-- Anuncio -->
+    <section>
+        <div class="anuncio">
+          <button id="llamar" href="tel:+123456789">
+              <p>Request a free estimate</p>
+          </button>
+          <h3>Or call +123456789</h3>
+        </div>  
+    </section>
 
     <!-- Presentacion -->
     <section class="presentacion">

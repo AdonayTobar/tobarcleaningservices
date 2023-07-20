@@ -1,0 +1,515 @@
+/* General */
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --fondo: #C38EB4;
+    --fondo1: #0B0C11;
+    --letra: #26425A;
+    --letra2: #3f6a8a;
+    --letra3: #4d5e72;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  body {
+    
+    /* font-size: 62.5%; */
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--fondo);
+  }
+  .inactive {
+    display: none !important;
+  }
+  
+  
+  /* Navbar (general) */
+  
+  header {
+    position:relative;
+    width: 100%;
+    background-color: var(--fondo);
+  }
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--letra3);
+    background-color: #c38eb413;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 0;
+    z-index: 10000;
+  }
+
+  nav.open {
+    background-color: var(--fondo); /* Color de fondo cuando el menú esté abierto */
+  }
+  .menu {
+    display: none;
+  }
+  .logo {
+    width: 200px;
+  }
+  .navbar-left ul,
+  .navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  .navbar-left {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-left ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  .navbar-left ul {
+    margin-left: 12px;
+  }
+  .navbar-left ul li a,
+  .navbar-right ul li a {
+    text-decoration: none;
+    color: var(--letra3);
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+  }
+  .navbar-left ul li a:hover,
+  .navbar-right ul li a:hover {
+    border: 1px solid var(--very-light-pink);
+  }
+
+  
+  /* Menu en desktop */
+  .desktop-menu {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    background: var(--white);
+    width: 150px;
+    height: auto;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 6px;
+    padding: 20px 20px 0 20px;
+  }
+  .desktop-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .desktop-menu ul li {
+    text-align: end;
+  }
+  .desktop-menu ul li:nth-child(1),
+  .desktop-menu ul li:nth-child(2) {
+    font-weight: bold;
+  }
+  .desktop-menu ul li:last-child {
+    padding-top: 20px;
+    border-top: 1px solid var(--very-light-pink);
+  }
+  .desktop-menu ul li:last-child a {
+    color: var(--hospital-green);
+    font-size: var(--sm);
+  }
+  .desktop-menu ul li a {
+    color: var(--back);
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  
+  /* Menu en mobile */
+  .mobile-menu {
+    z-index: 7000;
+    background-color: var(--fondo);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 24px 24px 45px 24px;
+  }
+  .mobile-menu a {
+    text-decoration: none;
+    color: var(--letra3);
+    font-weight: bold;
+    /* margin-bottom: 24px; */
+  }
+  .mobile-menu ul {
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+  }
+  .mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--letra3);
+  }
+  .mobile-menu ul li {
+    margin-bottom: 24px;
+  }
+
+
+
+  /* Video de fondo */
+  #video-container {
+    position: relative;
+    margin-top: -3.8rem;
+    width: 100%;
+    height: 90vh; /* 100% del alto de la ventana visible */
+    overflow: hidden;
+  }
+  
+  #video-container video {
+    z-index: 1;
+    min-width: 100%; /* El video ocupa todo el ancho mínimo disponible */
+    min-height: 100%; /* El video ocupa todo el alto mínimo disponible */
+    width: auto; /* El ancho del video se ajusta automáticamente */
+    height: auto; /* El alto del video se ajusta automáticamente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el video horizontal y verticalmente */
+  }
+  
+  #video-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    background-color: #c38eb413; /* Filtro de color azul con opacidad del 50% */
+    z-index: 100;
+  }
+
+  #video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #C38EB4, transparent); /* Degradado de negro a transparente */
+    z-index: 1; /* Asegura que el overlay esté encima del video */
+  }
+  
+  #video-container .overlay-text {
+    width: 100%;
+    z-index: 102;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--letra);
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* Presentacion */
+  .presentacion {
+    max-width: 90%;
+    margin: 0 auto;
+    height: auto;
+    padding: 5rem;
+    padding-top: 0 !important;
+    text-align: center;
+  }
+  .presentacion h2{
+    color: var(--letra2);
+    padding-bottom: 2rem;
+  }
+  .presentacion h3{
+    color: var(--letra3);
+  }
+  .imgLogoIris {
+    width: 17rem;
+    padding-bottom: 5rem;
+  }
+
+  /* Frase del pastor */
+.frase {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 5rem;
+}
+
+  .frase div:nth-child(1){
+    position: relative;
+    width: 18rem;
+    height: 18rem;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 3%;
+    overflow: hidden;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: var(--fondo);
+  }
+  .frase img {
+    position: absolute;
+    left: 0%;
+    width: 18rem;
+    width: 18rem;
+    transition: transform 0.3s ease;
+  }
+  .frase img:hover {
+    transform: scale(1.2);
+    top: -10%;
+  }
+
+  .frase div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+  }
+  .frase h2{
+    color: var(--letra3);
+  }
+  .frase h3{
+    color: var(--letra2);
+  }
+
+  .servicios {
+    color: var(--letra);
+    text-align: center;
+  }
+
+  /* Seccion del mapa */
+.mapa h2 {
+  color: var(--very-light-pink);
+  text-align: center;
+  margin-top: 4rem;
+}
+  #map {
+    width: 90%;
+    height: 20rem;
+    margin-top: 5rem;
+    margin: 1rem auto 0 auto;
+    border-radius: 1rem;
+  }
+
+
+  /* Seccion de Contacto */
+
+  .contacto h2 {
+    color: #C7C7C7;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+  .contacto div{
+    display: flex;
+    justify-content: center;
+  }
+  .contacto img {
+    width: 6rem;
+    cursor: pointer;
+  }
+  .contacto img:active{
+    transform: scale(.9);
+  }
+
+  /* Seccion de horarios */
+  .horario {
+    max-width: 20rem;
+    margin: 3rem auto 3rem auto;
+  }
+  .horario .dia {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dia h3{
+    color: #64BEB5;
+    padding-top: 1rem;
+  }
+  .dia p {
+    padding-top: 1rem;
+    color: var(--very-light-pink);
+  }
+
+
+  /* Seccion de Conocenos */
+  .conoce{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .taberlogo{
+    width: 20rem;
+  }
+  .mision{
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5rem;
+  }
+  .mision h2{
+    color: var(--letra2);
+    padding-bottom: 1rem;
+  }
+  .mision h3{
+    color: var(--letra3);
+  }
+
+  /* Pie de pagina */
+footer{
+  width: 100%;
+  height: 5rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--letra);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--letra3);
+}
+
+
+/* Seccion del boton de llamar */
+#scrollButton {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--letra); /* Elimina el fondo para que solo se vea el icono */
+  z-index: 50000;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+#scrollButton img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* Responsive */
+
+  @media (max-width: 640px) {
+    .menu {
+      display: block;
+      width: 1.5rem;
+    }
+    .navbar-left ul {
+      display: none;
+    }
+    .navbar-left {
+      justify-content: space-around;
+    }
+    .navbar-email {
+      display: none;
+    }
+    .desktop-menu {
+      display: none;
+    }
+    .logo {
+        width: 200px;
+    }
+    #video-container {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* 100% del alto de la ventana visible */
+      overflow: hidden;
+    }
+    #video-overlay {
+      position: absolute;
+      top: 0%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, #C38EB4 17%, transparent); /* Degradado de negro a transparente */
+      z-index: 1; /* Asegura que el overlay esté encima del video */
+    }
+
+    #video-container .overlay-text {
+      z-index: 3000;
+      width: 95%;
+      height: 90%;
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--letra);
+      font-size: 2.8rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #video {
+      display: none;
+    }
+  
+    #image {
+      display: block;
+    }
+    .presentacion {
+      max-width: 100%;
+      padding: 5rem 2rem 2rem 2rem;
+      z-index: 3;
+    }
+    .frase {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+  }
+  
+  @media (min-width: 641px) {
+    .mobile-menu {
+      display: none;
+    }
+  }
+
+ 

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taber Tejutepeque</title>
+    <link rel="icon" href="./iconos/LogoIrisPagina.jpg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Barra de navegacion -->
+    <header>
+        <nav>
+        <img src="./iconos/menu-svgrepo-com (10).svg" alt="menu" class="menu">
+  
+        <div class="navbar-left">
+          <img src="./iconos/logoIrisInicio.png" alt="logo" class="logo">
+  
+          <ul>
+            <li>
+              <a class="all" href="#conoce">Servicios</a>
+            </li>
+            <li>
+              <a class="clothes" href="#hora">Horarios</a>
+            </li>
+            <li>
+              <a class="elec" href="#visit">Como llegar</a>
+            </li>
+            <li>
+              <a class="fur" href="#contact">Contactanos</a>
+            </li>
+          </ul>
+        </div>
+
+  
+        <div class="mobile-menu inactive">
+          <ul>
+            <li>
+              <a href="">Menu</a>
+            </li>
+            <li>
+              <a class="all" href="#conoce">Servicios</a>
+            </li>
+            <li>
+              <a class="clothes" href="#hora">Horarios</a>
+            </li>
+            <li>
+              <a class="elec" href="#visit">Como llegar</a>
+            </li>
+            <li>
+              <a class="fur" href="#contact">Contactanos</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+
+    <!-- Video de fondo -->
+    <div id="video-container">
+      <video id="video" src="./Video/VideoFondo.mp4" autoplay loop muted></video>
+      <img id="image" src="https://images.pexels.com/photos/1599790/pexels-photo-1599790.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+      <div id="video-overlay"></div>
+      <div class="overlay-text">Professional House Cleaning Services</div>
+    </div>
+
+    <!-- Presentacion -->
+    <section class="presentacion">
+      <div class="logoIris"><img class="imgLogoIris" src="./iconos/logoIris.png" alt=""></div>
+      <h2>¡Bienvenidos a nuestro hogar digital!</h2>
+      <h3>En Tobar's Cleaning Service, nos complace recibirte con los brazos abiertos. Aquí encontrarás un espacio donde el cuidado y la limpieza de tu hogar son nuestra prioridad absoluta. Nuestro equipo altamente capacitado está listo para brindarte un servicio excepcional y hacer que tu experiencia con nosotros sea inolvidable.</h3>
+      <h3>Nos enorgullece ofrecerte un ambiente cálido, confiable y de confianza. Queremos que te sientas como parte de nuestra familia, porque para nosotros, tú eres más que un cliente. Tu satisfacción es nuestro mayor logro, y trabajaremos arduamente para superar tus expectativas en cada visita.</h3>
+      <h3>Desde la limpieza regular hasta los servicios de limpieza profunda, nos esforzamos por dejar tu hogar reluciente y fresco. No importa cuán desafiante pueda ser la tarea, nuestro compromiso es asegurarnos de que cada rincón quede impecable y radiante.</h3>
+      <h3>¡Llámanos y descubre cómo podemos hacer tu vida más fácil y cómoda! Explora nuestro sitio y encuentra la clave para un entorno limpio, acogedor y libre de preocupaciones. En Tobar's Cleaning Service, agradecemos tu elección y nos emociona ser parte de tu viaje hacia un hogar más limpio y feliz. Confía en nuestro equipo altamente capacitado para dejar cada rincón impecable y radiante. ¡Bienvenido a la familia Tobar's Cleaning Service, donde tu hogar brilla con esplendor!"</h3>
+    </section>
+
+    <!-- Seccion de Frase del pastor -->
+    <section class="frase">
+      <div>
+        <img src="https://images.pexels.com/photos/709767/pexels-photo-709767.png?auto=compress&cs=tinysrgb&w=600" alt="">
+      </div>
+      <div>
+        <h2>"Transformando hogares, dejando impecable cada rincón, sin importar lo desafiante que parezca"</h2>
+        <h3>- Azucena Tobar -</h3>
+      </div>
+    </section>
+
+    <!-- Seccion del mapa -->
+    <section class="mapa" id="visit">
+      <h2>Donde estamos?</h2>
+      <div id="map"></div>
+    </section>
+
+
+    <!-- Seccion de horarios -->
+    <section class="horario inactive" id="hora">
+      <div>
+        <div class="dia">
+          <h3>Domingo</h3>
+          <p>5AM, 8AM, 10AM y 3PM.</p>
+        </div>
+        <div class="dia">
+          <h3>Lunes</h3>
+          <p>5:00 PM</p>
+        </div>
+        <div class="dia">
+          <h3>Jueves</h3>
+          <p>5:00 PM</p>
+        </div>
+        <div class="dia">
+          <h3>Viernes</h3>
+          <p>5:00 PM</p>
+        </div>
+        <div class="dia">
+          <h3>Sabado</h3>
+          <p>4:00 PM</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion de conocenos -->
+    <section class="conoce inactive" id="conoce">
+
+        
+      <h2 class="servicios">¿Cuáles son los servicios de limpieza adecuados para su hogar?</h2>
+  
+      <div class="mision">
+        <h3>Las compañías que se dedican a la limpieza de viviendas ofrecen una variedad de opciones de servicios para satisfacer diferentes necesidades. En ocasiones, su presupuesto personal puede limitar la elección del paquete que seleccione. En otros casos, la decisión puede basarse en preferencias personales. Aunque cada empresa de servicios de limpieza en su área puede ofrecer ligeras variaciones en sus paquetes, en general, desglosan sus servicios de manera similar. ¿Qué debe saber sobre los tipos de servicios de limpieza disponibles para su hogar?</h3>
+      </div>
+      <div class="mision">
+        <h2>Limpieza básica</h2>
+        <h3>Este servicio abarca los elementos esenciales necesarios para mantener una casa ordenada y puede elegirse para sesiones de limpieza semanales o quincenales. Incluye tareas básicas como organizar, aspirar, limpiar encimeras, trapear, quitar el polvo, entre otros.</h3>
+      </div>
+      <div class="mision">
+        <h2>Limpieza a fondo</h2>
+        <h3>Este servicio se basa en la limpieza básica del hogar. Los servicios adicionales específicos que se ofrecen en la limpieza a fondo pueden variar, pero algunos de los más comunes incluyen la limpieza de lámparas, horno, zócalos, ventiladores de techo, paredes, entre otros. Si tiene una casa concurrida con niños y mascotas, es posible que desee realizar una limpieza a fondo cada ciertos meses. De lo contrario, muchas personas programan este servicio dos veces al año.</h3>
+      </div>
+      <div class="mision">
+        <h2>Limpieza puntual</h2>
+        <h3>Existen momentos en la vida en los que se necesita un poco de ayuda extra en el hogar, pero tal vez no se desee comprometer con servicios regulares. Por ejemplo, puede ser que esté preparando una fiesta y necesite ayuda para limpiar antes o después del evento. También, cuando se muda de una casa a otra, los servicios de limpieza profesional pueden ser beneficiosos.</h3>
+      </div>
+      <div class="mision">
+        <h3>Cuando hable con una empresa de limpieza de viviendas acerca de cualquier tipo de servicio o paquete que ofrezcan, asegúrese de obtener una lista completa de las tareas que los limpiadores realizarán. Esto le ayudará a asegurarse de que no se sienta decepcionado al finalizar el servicio.</h3>
+      </div>
+      <img class="taberlogo" src="./iconos/logoIris.png" alt="">
+    </section>
+
+
+    <!-- Seccion de contacto -->
+    <section class="contacto" id="contact">
+      <h2>Contactanos en Facebook</h2>
+      <div>
+        <img src="./iconos/facebook-svgrepo-com.svg" alt="" class="face">
+      </div>
+    </section>
+
+
+    <a id="scrollButton" href="tel:+123456789">
+    <img src="./iconos/telephone-phone-svgrepo-com.svg" alt="Icono Personalizado">
+  </a>
+
+    <!-- Pie de pagina -->
+    <footer>
+      <h3>© 2023 Tobar's Cleaning Service</h3>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>

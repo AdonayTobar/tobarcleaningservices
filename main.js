@@ -17,15 +17,15 @@ function toggleMobileMenu() {
 
 
 //Haciendo lo del mapa
-var map = L.map('map').setView([13.85054991313553, -88.90463898281068], 13);
+var map = L.map('map').setView([ 31.2504400, -99.2506100], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-  maxZoom: 18,
+  maxZoom: 5,
 }).addTo(map);
 
-L.marker([13.85054991313553, -88.90463898281068]).addTo(map)
-  .bindPopup('¡Hola! Aqui Estamos.')
+L.marker([ 31.2504400, -99.2506100]).addTo(map)
+  .bindPopup('¡Hello! We are in Texas')
   .openPopup();
 
 

@@ -319,9 +319,20 @@
 
   /* Seccion del mapa */
 .mapa h2 {
-  color: var(--very-light-pink);
+  color: var(--letra2);
   text-align: center;
   margin-top: 4rem;
+  padding: 0 2rem;
+}
+.mapa h3{
+  color: var(--letra3);
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+.mapa .anuncio {
+  width: 75%;
+  margin: 0 auto;
 }
   #map {
     width: 90%;
@@ -335,7 +346,7 @@
   /* Seccion de Contacto */
 
   .contacto h2 {
-    color: #C7C7C7;
+    color: var(--letra3);
     text-align: center;
     padding-top: 5rem;
     padding-bottom: 1rem;
@@ -343,6 +354,7 @@
   .contacto div{
     display: flex;
     justify-content: center;
+    
   }
   .contacto img {
     width: 6rem;
@@ -352,26 +364,6 @@
     transform: scale(.9);
   }
 
-  /* Seccion de horarios */
-  .horario {
-    max-width: 20rem;
-    margin: 3rem auto 3rem auto;
-  }
-  .horario .dia {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .dia h3{
-    color: #64BEB5;
-    padding-top: 1rem;
-  }
-  .dia p {
-    padding-top: 1rem;
-    color: var(--very-light-pink);
-  }
 
 
   /* Seccion de Conocenos */
@@ -434,7 +426,17 @@ footer{
   height: 100%;
 }
 
-
+/* Seccion donde estamos */
+.dondeE{
+  width: 95%;
+  text-align: center;
+}
+.dondeE h2{
+  color: var(--letra2);
+}
+.dondeE h3{
+  color: var(--letra3);
+}
 
 
 
@@ -469,7 +471,7 @@ footer{
     #video-container {
       position: relative;
       width: 100%;
-      height: 100vh; /* 100% del alto de la ventana visible */
+      height: 36rem; /* 100% del alto de la ventana visible */
       overflow: hidden;
     }
     #video-overlay {
@@ -487,7 +489,7 @@ footer{
       width: 95%;
       height: 100%;
       position: absolute;
-      top: 95%;
+      top: 41rem;
       left: 50%;
       transform: translate(-50%, -50%);
       color: var(--letra);
@@ -527,7 +529,7 @@ footer{
       width: 100%;
       height: auto;
       background-color: var(--fondo);
-      margin-top: -10rem;
+      margin-top: -5rem;
       margin-bottom: 2rem;
       text-align: center;
     }
@@ -537,16 +539,25 @@ footer{
       text-decoration: none;
       padding: 1rem 2rem;
       border-radius: 0.8rem;
-      background-color: var(--letra3);
+      background-color: var(--letra);
       color: var(--fondo);
       text-align: center;
-      margin: 6rem auto 1rem auto;
+      margin: 5rem auto 1rem auto;
     }
-    .llamar:hover {
-      background-color: var(--letra);
+    .llamar:active {
+      background-color: var(--letra3);
     }
     .anuncio h3 {
       padding-top: 1rem;
+    }
+    .anuncio h3 a{
+      text-decoration: none;
+      color: var(--letra3);
+      font-weight: bold;
+    }
+    .anuncio h3 a:hover{
+      text-decoration: underline;
+      font-weight: bold;
     }
     .presentacion {
       max-width: 100%;

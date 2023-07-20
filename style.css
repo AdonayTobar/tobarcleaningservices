@@ -525,26 +525,24 @@ footer{
     .anuncio {
       z-index: 70000;
       width: 100%;
-      height: 7rem;
+      height: auto;
       background-color: var(--fondo);
       margin-top: -10rem;
       margin-bottom: 2rem;
       text-align: center;
     }
-    .anuncio #llamar{
+    .anuncio .llamar{
       cursor: pointer;
-      width: 50%;
-      height: 2rem;
-      border-radius: 0.5rem;
+      display: block;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 0.8rem;
       background-color: var(--letra3);
       color: var(--fondo);
       text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
+      margin: 6rem auto 1rem auto;
     }
-    .anuncio #llamar:active {
+    .llamar:hover {
       background-color: var(--letra);
     }
     .anuncio h3 {

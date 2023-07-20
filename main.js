@@ -104,6 +104,14 @@ function markClicked() {
   isClicked = true;
 }
 
+//Haciendo el boton de llamar
+var buttonLlamar = document.getElementsByClassName('.llamar');
+var isClickedL = false;
+
+function markClicked() {
+  isClickedL = true;
+}
+
 const closeMenu = document.querySelector(".closeMenu img");
 
 closeMenu.addEventListener("click", () => {

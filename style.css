@@ -477,7 +477,7 @@ footer{
       top: 0%;
       left: 0;
       width: 100%;
-      height: 65%;
+      height: 70%;
       background: linear-gradient(to top, #C38EB4 5%, transparent); /* Degradado de negro a transparente */
       z-index: 1; /* Asegura que el overlay esté encima del video */
     }
@@ -499,9 +499,17 @@ footer{
     #video {
       display: none;
     }
+
+    .vamos {
+      width: 100%;
+      height: 40.5rem;
+      overflow: hidden;
+      position: relative;
+    }
   
     #image {
       display: block;
+      position: absolute;
     }
 
     .anuncio {
@@ -535,7 +543,7 @@ footer{
     .presentacion {
       max-width: 100%;
       padding: 5rem 2rem 2rem 2rem;
-      z-index: 6000;
+      z-index: 100000;
       margin-top: 0rem;
     }
     .frase {
@@ -563,6 +571,21 @@ footer{
   @media (min-width: 641px) {
     .mobile-menu {
       display: none;
+    }
+  }
+
+    @media (max-width: 400px) {
+    .mobile-menu {
+      display: none;
+    }
+        #video-overlay {
+      position: absolute;
+      top: 0%;
+      left: 0;
+      width: 100%;
+      height: 57%;
+      background: linear-gradient(to top, #C38EB4 5%, transparent); /* Degradado de negro a transparente */
+      z-index: 1; /* Asegura que el overlay esté encima del video */
     }
   }
 

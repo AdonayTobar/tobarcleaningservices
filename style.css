@@ -409,8 +409,8 @@ footer{
   position: fixed;
   bottom: 50px;
   right: 20px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -419,6 +419,7 @@ footer{
   z-index: 50000;
   padding: 5px;
   border-radius: 50%;
+  border: 1px solid white;
 }
 
 #scrollButton img {
@@ -426,17 +427,42 @@ footer{
   height: 100%;
 }
 
-/* Seccion donde estamos */
-.dondeE{
-  width: 95%;
-  text-align: center;
-}
-.dondeE h2{
-  color: var(--letra2);
-}
-.dondeE h3{
-  color: var(--letra3);
-}
+/* Seccion de anuncio */
+    .anuncio {
+      z-index: 70000;
+      width: 100%;
+      height: auto;
+      background-color: var(--fondo);
+      margin-top: -5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .anuncio .llamar{
+      cursor: pointer;
+      display: block;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 0.8rem;
+      background-color: var(--letra);
+      color: var(--fondo);
+      text-align: center;
+      margin: 5rem auto 1rem auto;
+    }
+    .llamar:active {
+      background-color: var(--letra3);
+    }
+    .anuncio h3 {
+      padding-top: 1rem;
+    }
+    .anuncio h3 a{
+      text-decoration: none;
+      color: var(--letra3);
+      font-weight: bold;
+    }
+    .anuncio h3 a:hover{
+      text-decoration: underline;
+      font-weight: bold;
+    }
 
 
 

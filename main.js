@@ -51,23 +51,12 @@ conocenos.forEach(function(elemento) {
     frase.classList.add("inactive");
     mapa.classList.add("inactive");
     secC.classList.remove("inactive");
-    hora.classList.add("inactive");
     mobileMenu.classList.add('inactive');
     nav.classList.remove('open');
   });
 });
 
-horarios.forEach(function(elemento) {
-  elemento.addEventListener('click', function() {
-    presentacion.classList.add("inactive");
-    frase.classList.add("inactive");
-    mapa.classList.add("inactive");
-    secC.classList.add("inactive");
-    hora.classList.remove("inactive");
-    mobileMenu.classList.add('inactive');
-    nav.classList.remove('open');
-  });
-});
+
 
 como.forEach(function(elemento) {
   elemento.addEventListener('click', function() {
@@ -75,7 +64,6 @@ como.forEach(function(elemento) {
     frase.classList.add("inactive");
     mapa.classList.remove("inactive");
     secC.classList.add("inactive");
-    hora.classList.add("inactive");
     mobileMenu.classList.add('inactive');
     nav.classList.remove('open');
   });
@@ -93,7 +81,7 @@ contacto.forEach(function(elemento) {
 const face = document.querySelector(".face");
 
 face.addEventListener("click", () => {
-  window.location.href = 'https://www.facebook.com/profile.php?id=100093685069037&mibextid=ZbWKwL';
+  window.open('https://www.facebook.com/profile.php?id=100094587115402', '_blank');
 });
 
 //Haciendo el boton de llamar
@@ -117,6 +105,11 @@ const closeMenu = document.querySelector(".closeMenu img");
 closeMenu.addEventListener("click", () => {
   mobileMenu.classList.toggle('inactive');
     nav.classList.toggle('open');
+});
+
+const reiniciar = document.querySelector(".logo");
+reiniciar.addEventListener("click", () => {
+  location.reload(); // Esta línea reiniciará la página
 });
 
 
